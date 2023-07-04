@@ -5,3 +5,4 @@ dist
 lib
 esmLoaderPath
 packages/fairys-core/components
+.cache
