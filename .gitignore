@@ -4,5 +4,6 @@ package-lock.json
 dist
 lib
 esmLoaderPath
-packages/fairys-core/components
 .cache
+packages/fairys-core/src/components.d.ts
+
