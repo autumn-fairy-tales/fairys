@@ -1,0 +1,18 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "component": "npm run-script build --workspace @fairys/core",
+    "react": "npm run-script build --workspace @fairys/react",
+    "build": "npm run component && npm run react",
+    "version": "lerna version --exact --force-publish --no-push --no-git-tag-version",
+    "publish": "lerna publish"
+  },
+  "workspaces": [
+    "packages/*",
+    "website"
+  ],
+  "devDependencies": {
+    "lerna": "^7.0.1"
+  }
+}

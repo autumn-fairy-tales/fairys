@@ -1,0 +1,31 @@
+{
+  "name": "@fairys/react",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "SunLxy <1011771396@qq.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@fairys/core": "*"
+  },
+  "scripts": {
+    "build": "npm run tsc",
+    "tsc": "tsc -p ."
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.1.6",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6"
+  }
+}
