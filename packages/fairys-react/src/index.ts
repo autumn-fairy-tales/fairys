@@ -5,6 +5,6 @@ import { createReactComponent } from './react-component-lib';
 
 import type { JSX } from '@fairys/core/dist/components';
 
-import { defineCustomElement as defineMyComponent } from '@fairys/core/dist/components/my-component.js';
+import { defineCustomElement as defineFairysButton } from '@fairys/core/dist/components/fairys-button.js';
 
-export const MyComponent = /*@__PURE__*/createReactComponent<JSX.MyComponent, HTMLMyComponentElement>('my-component', undefined, undefined, defineMyComponent);
+export const FairysButton = /*@__PURE__*/createReactComponent<JSX.FairysButton, HTMLFairysButtonElement>('fairys-button', undefined, undefined, defineFairysButton);
