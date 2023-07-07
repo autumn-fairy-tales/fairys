@@ -19,6 +19,7 @@
   },
   "scripts": {
     "build": "npm run tsc",
+    "start": "tsc  --watch",
     "tsc": "tsc -p ."
   },
   "devDependencies": {

@@ -1,0 +1,47 @@
+:host {
+  display: block;
+}
+
+fairys-button {
+
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color:#fff;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &[type="primary"] {
+    background-color: #1677ff;
+    color: #fff;
+    border-color: #1677ff;
+
+    &:not([disabled]):active{
+      box-shadow: 1px 1px 3px #1677ff,1px 1px 3px #1677ff;
+    }
+
+  }
+
+  &[type="dashed"] {
+    border-style: dashed; 
+  }
+
+  &[disabled]{
+    cursor: not-allowed;
+    border-color: #d9d9d9;
+    color: rgba(0,0,0,.25);
+    background-color: #0006000a;
+    box-shadow: none;
+    user-select: none;
+  }
+
+  &[size="large"] {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+
+  &[size="small"] {
+    padding: 3px 5px;
+    font-size: 12px;
+  }
+
+}

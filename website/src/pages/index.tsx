@@ -1,11 +1,20 @@
-import "@fairys/core"
-import { MyComponent, CarefreeButton, } from "@fairys/react"
-
+import { FairysButton } from "@fairys/react"
 
 const Index = () => {
   return <div>
     Index
-    <MyComponent first="Your" middle="张三" last="Name" />
+    <FairysButton type="primary" className="dajd" >
+      展示内容
+    </FairysButton>
+    <FairysButton disabled type="dashed" className="dajd" >
+      展示内容
+    </FairysButton>
+    <FairysButton size="large"  >
+      展示内容
+    </FairysButton>
+    <FairysButton size="small" >
+      展示内容
+    </FairysButton>
   </div>;
 };
 export const element = <Index />;
