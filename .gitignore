@@ -6,4 +6,5 @@ lib
 esmLoaderPath
 .cache
 packages/fairys-core/src/components.d.ts
+packages/fairys-core/styles
 

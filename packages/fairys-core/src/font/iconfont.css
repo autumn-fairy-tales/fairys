@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4139613 */
+  src: url('iconfont.woff2?t=1688353374474') format('woff2'),
+       url('iconfont.woff?t=1688353374474') format('woff'),
+       url('iconfont.ttf?t=1688353374474') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close-circle-fill:before {
+  content: "\e844";
+}
+
+.icon-doubleleft:before {
+  content: "\e7ef";
+}
+
+.icon-doubleright:before {
+  content: "\e7f0";
+}
+
+.icon-delete1:before {
+  content: "\e602";
+}
+
+.icon-shanchu:before {
+  content: "\e621";
+}
+
+.icon-gengduo-shuxiang:before {
+  content: "\e8c4";
+}
+
+.icon-gengduo:before {
+  content: "\e607";
+}
+
+.icon-close-circle:before {
+  content: "\e77d";
+}
+
+.icon-minus-circle:before {
+  content: "\e780";
+}
+
+.icon-plus-circle:before {
+  content: "\e781";
+}
+
+.icon-right:before {
+  content: "\e7eb";
+}
+
+.icon-left:before {
+  content: "\e7ec";
+}
+
+.icon-up:before {
+  content: "\e7ed";
+}
+
+.icon-down:before {
+  content: "\e7ee";
+}
+
+.icon-check:before {
+  content: "\e7fc";
+}
+
+.icon-close:before {
+  content: "\e7fd";
+}
+

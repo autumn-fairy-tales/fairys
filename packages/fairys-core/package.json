@@ -19,7 +19,8 @@
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build --docs",
+    "font": "node ./scripts/font.js",
+    "build": "npm run font && stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "watch": "stencil build --watch",
     "test": "stencil test --spec --e2e",
@@ -30,6 +31,9 @@
     "@stencil/core": "^4.0.0"
   },
   "devDependencies": {
+    "postcss": "8.4.24",
+    "postcss-js": "4.0.1",
+    "fs-extra": "~11.1.1",
     "@stencil/react-output-target": "~0.5.3",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
