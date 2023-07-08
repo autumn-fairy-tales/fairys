@@ -1,0 +1,34 @@
+{
+  "name": "@fairys/react-output-target",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "SunLxy <1011771396@qq.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "resolve-package-path": "~4.0.3",
+    "@stencil/react-output-target": "~0.5.3"
+  },
+  "devDependencies": {
+    "rollup": "^3.26.2",
+    "ts-node": "~10.9.1",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "~5.1.6"
+  }
+}
