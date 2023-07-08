@@ -1,4 +1,4 @@
-import { Button } from "@fairys/react"
+import { Button } from "@fairys/react/lib/components/button"
 
 const Index = () => {
   return <div>

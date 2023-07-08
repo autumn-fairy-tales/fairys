@@ -7,7 +7,7 @@
   "license": "MIT",
   "main": "lib/index.js",
   "module": "lib/index.js",
-  "types": "lib/types/index.d.ts",
+  "types": "lib/index.d.ts",
   "files": [
     "lib"
   ],
@@ -18,9 +18,8 @@
     "@fairys/core": "*"
   },
   "scripts": {
-    "build": "npm run tsc",
-    "start": "tsc  --watch",
-    "tsc": "tsc -p ."
+    "build": "tsc",
+    "start": "tsc --watch"
   },
   "devDependencies": {
     "react": "^18.2.0",
