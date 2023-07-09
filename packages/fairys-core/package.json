@@ -31,6 +31,7 @@
     "@stencil/core": "^4.0.0"
   },
   "devDependencies": {
+    "@stencil/sass": "~3.0.4",
     "@fairys/react-output-target": "0.0.1",
     "postcss": "8.4.24",
     "postcss-js": "4.0.1",

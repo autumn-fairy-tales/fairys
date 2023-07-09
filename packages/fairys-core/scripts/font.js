@@ -5,7 +5,7 @@ const postcssJs = require("postcss-js")
 
 const ttfUrl = Path.join(__dirname, "../src/font/iconfont.ttf")
 const cssStyle = Path.join(__dirname, "../src/font/iconfont.css")
-const outPath = Path.join(__dirname, "../styles/index.scss")
+const outPath = Path.join(__dirname, "../src/styles/font.scss")
 
 const runIcon = async () => {
   try {
