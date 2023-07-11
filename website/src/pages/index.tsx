@@ -1,15 +1,16 @@
-import { Button } from "@fairys/react/lib/components/button"
+// import { Button } from "@fairys/react/lib/components/button"
+import { Button, Icon } from '@fairys/react'
 
 const Index = () => {
   return <div>
     Index
+    <Icon
+      onClickChange={(e) => console.log(333, e)}
+    >33</Icon>
     <Button type="primary" className="dajd" >
       展示内容
     </Button>
-    <Button disabled type="dashed" className="dajd" >
-      展示内容
-    </Button>
-    <Button size="large"  >
+    <Button size="large" type="primary"  >
       展示内容
     </Button>
     <Button size="small" >

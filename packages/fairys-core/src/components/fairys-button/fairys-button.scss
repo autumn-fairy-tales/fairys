@@ -1,24 +1,39 @@
-:host {
-  display: block;
+$class-prefix: 'fairys-button';
+$default-color: #f2f3f5;
+$primary-color: rgb(22, 93, 255);
+$border-radius: 2px;
+
+@mixin buttonVariant($color, $background) {
+  color: $color;
+  background-color: $background;
+  border-color: $background;
+  &:hover {
+    background-color: darken($background, 10%);
+  }
+
+  &:active {
+    background-color: darken($background, 20%);
+  }
 }
 
 fairys-button {
-
-  padding: 5px 10px;
+  padding: 0 12px;
   border: 1px solid #ccc;
   background-color:#fff;
-  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius;
+  font-size: 14px;
+  height: 30px;
+  user-select: none;
+  white-space: nowrap;
   cursor: pointer;
+  @include buttonVariant(#333, $default-color);
+  transition: background-color .5s;
 
   &[type="primary"] {
-    background-color: #1677ff;
-    color: #fff;
-    border-color: #1677ff;
-
-    &:not([disabled]):active{
-      box-shadow: 1px 1px 3px #1677ff,1px 1px 3px #1677ff;
-    }
-
+    @include buttonVariant(#fff, $primary-color);
   }
 
   &[type="dashed"] {
@@ -30,18 +45,18 @@ fairys-button {
     border-color: #d9d9d9;
     color: rgba(0,0,0,.25);
     background-color: #0006000a;
-    box-shadow: none;
     user-select: none;
   }
 
   &[size="large"] {
-    padding: 10px 15px;
-    font-size: 18px;
+    padding: 0 15px;
+    font-size: 14px;
+    height: 34px;
   }
 
   &[size="small"] {
-    padding: 3px 5px;
+    padding: 0 5px;
     font-size: 12px;
+    height: 26px;
   }
-
 }

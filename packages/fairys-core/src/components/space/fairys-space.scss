@@ -1,0 +1,30 @@
+$class-prefix: 'fairys-space';
+
+fairys-space {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: inherit;
+}
+
+.#{$class-prefix} {
+  &-align {
+    &-start {
+      align-items: flex-start;
+    }
+    &-center {
+      align-items: center;
+    }
+    &-end {
+      align-items: flex-end;
+    }
+    &-baseline {
+      align-items: baseline;
+    }
+  }
+  &-vertical {
+    flex-direction: column;
+  }
+  &-wrap {
+    flex-wrap: wrap;
+  }
+}
