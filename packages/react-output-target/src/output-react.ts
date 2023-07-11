@@ -1,4 +1,5 @@
 import path from 'path';
+import fs from "fs"
 import type { OutputTargetReact } from '@stencil/react-output-target/dist/types';
 import { readPackageJson, sortBy } from './utils';
 import type { CompilerCtx, ComponentCompilerMeta, Config, } from '@stencil/core/internal';
@@ -33,6 +34,7 @@ export async function reactProxyOutput(
   await compilerCtx.fs.writeFile(outputTarget.proxiesFile, finalObj.indexContent);
 
   await copyResources(config, outputTarget);
+  await rewriteStyleType(outputTarget.proxiesFile)
 }
 
 /**
@@ -77,4 +79,12 @@ async function copyResources(config: Config, outputTarget: OutputTargetReact) {
   }
 }
 
-
+async function rewriteStyleType(proxiesFile: string) {
+  const pathName = path.join(path.dirname(proxiesFile), 'react-component-lib', "interfaces.ts");
+  let content = fs.readFileSync(pathName, "utf-8");
+  if (content) {
+    content = `import React from "react";\n` + content;
+    content = content.replace("style?: { [key: string]: any }", "style?: React.CSSProperties")
+  }
+  fs.writeFileSync(pathName, content, { encoding: "utf-8", flag: "w+" })
+} 
