@@ -22,7 +22,7 @@
     "font": "node ./scripts/font.js",
     "build": "npm run font && stencil build --docs",
     "start": "stencil build --dev --watch --serve",
-    "watch": "stencil build --watch",
+    "watch": "stencil build --watch --docs",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
