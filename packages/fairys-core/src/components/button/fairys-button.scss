@@ -1,0 +1,138 @@
+$class-prefix: 'fairys-button';
+$default-color: #f2f3f5;
+$primary-color: rgb(22, 93, 255);
+$success-color: rgb(0,180,42);
+$warning-color: rgb(255,125,0);
+$danger-color: rgb(245,63,63);
+$white-color: rgb(32, 32, 32);
+$border-radius: 2px;
+
+@mixin buttonVariant($color, $background) {
+  color: $color;
+  background-color: $background;
+  border-color: $background;
+  &.#{$class-prefix + '-variant-dashed'} {
+    background-color: $color;
+    color: $background;
+    border-style: dashed;
+  }
+  &.#{$class-prefix + '-variant-border'} {
+    background-color: $color;
+    color: $background;
+  }
+  &:hover {
+    background-color: darken($background, 10%);
+    &.#{$class-prefix + '-variant-dashed'} {
+      background-color: darken($color, 10%);
+    }
+    &.#{$class-prefix + '-variant-border'} {
+      background-color: darken($color, 10%);
+    }
+  }
+}
+
+.#{$class-prefix} {
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  background-color:#fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius;
+  font-size: 14px;
+  height: 30px;
+  user-select: none;
+  white-space: nowrap;
+  cursor: pointer;
+  @include buttonVariant(#333, $default-color);
+  transition: background-color .5s;
+  &-default {
+    @include buttonVariant(#333, $default-color);
+    &.#{$class-prefix + '-variant-dashed'} {
+      background-color: $default-color;
+      color: #333;
+      border: 1px solid #767676;
+      border-style: dashed;
+      &:hover {
+        background-color: darken($default-color, 10%);
+      }
+    }
+    &.#{$class-prefix + '-variant-border'} {
+      background-color: $default-color;
+      color: #333;
+      border: 1px solid #767676;
+      &:hover {
+        background-color: darken($default-color, 10%);
+      }
+    }
+  }
+
+  &-primary {
+    @include buttonVariant(#fff, $primary-color);
+  }
+  &-success {
+    @include buttonVariant(#fff, $success-color);
+  }
+  &-warning {
+    @include buttonVariant(#fff, $warning-color);
+  }
+  &-danger {
+    @include buttonVariant(#fff, $danger-color);
+  }
+  &-white {
+    @include buttonVariant($white-color, #fff);
+    border: 1px solid #d9d9d9;
+    &.#{$class-prefix + '-variant-dashed'} {
+      background-color: #fff;
+      color: #333;
+      border-style: dashed;
+      &:hover {
+        background-color: darken(#fff, 10%);
+      }
+    }
+    &.#{$class-prefix + '-variant-border'} {
+      background-color: #fff;
+      color: #333;
+
+      &:hover {
+        background-color: darken(#fff, 10%);
+      }
+    }
+  }
+
+  &-block {
+    display: flex;
+    width: 100%;
+  }
+
+  &-shape {
+    border-radius: 16px;
+    &[size="large"] {
+      border-radius: 18px;
+    }
+    &[size="small"] {
+      border-radius: 13px;
+    }
+  }
+  
+
+  &[disabled]{
+    cursor: not-allowed;
+    border-color: #d9d9d9;
+    color: rgba(0,0,0,.25);
+    background-color: #0006000a;
+    user-select: none;
+  }
+
+  &[size="large"] {
+    padding: 0 15px;
+    font-size: 14px;
+    height: 34px;
+  }
+
+  &[size="small"] {
+    padding: 0 8px;
+    font-size: 12px;
+    height: 26px;
+  }
+}
