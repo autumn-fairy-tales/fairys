@@ -8,13 +8,18 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "6.10.0",
-    "react-router-dom": "6.10.0"
+    "react-router-dom": "6.10.0",
+    "@uiw/react-markdown-preview": "^4.1.10",
+    "react-code-preview-layout": "~3.0.0",
+    "styled-components": "^5.3.10"
   },
   "devDependencies": {
-    "@saqu/auto-create-routes": "^0.1.2",
+    "@saqu/auto-create-enter": "^0.1.6",
+    "@types/styled-components": "^5.1.26",
+    "@saqu/auto-create-routes": "^0.1.6",
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
-    "saqu": "^0.1.2"
+    "saqu": "^0.1.6"
   },
   "scripts": {
     "start": "saqu start",
