@@ -19,7 +19,6 @@
 - [x] Space 间距
 - [ ] Grid 栅格
 - [ ] Divider 分割线
-- [ ] BackTop 返回顶部
 - [ ] Layout 布局
 
 ## 表单组件
