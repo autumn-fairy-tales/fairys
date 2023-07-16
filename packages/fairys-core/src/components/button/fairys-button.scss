@@ -1,9 +1,9 @@
 $class-prefix: 'fairys-button';
 $default-color: #f2f3f5;
 $primary-color: #165dff;
-$success-color: #00b42a;
+$success-color: #2ba471;
 $warning-color: #ff7d00;
-$danger-color: #f53f3f;
+$danger-color: #d54941;
 $white-color: #202020;
 $border-radius: 2px;
 
@@ -23,10 +23,10 @@ $border-radius: 2px;
   &:hover {
     background-color: darken($background, 10%);
     &.#{$class-prefix + '-variant-dashed'} {
-      background-color: darken($color, 10%);
+      background-color: lighten($background, 42);
     }
     &.#{$class-prefix + '-variant-border'} {
-      background-color: darken($color, 10%);
+      background-color: lighten($background, 42%);
     }
   }
 }
