@@ -1,10 +1,10 @@
 $class-prefix: 'fairys-button';
 $default-color: #f2f3f5;
-$primary-color: rgb(22, 93, 255);
-$success-color: rgb(0,180,42);
-$warning-color: rgb(255,125,0);
-$danger-color: rgb(245,63,63);
-$white-color: rgb(32, 32, 32);
+$primary-color: #165dff;
+$success-color: #00b42a;
+$warning-color: #ff7d00;
+$danger-color: #f53f3f;
+$white-color: #202020;
 $border-radius: 2px;
 
 @mixin buttonVariant($color, $background) {
