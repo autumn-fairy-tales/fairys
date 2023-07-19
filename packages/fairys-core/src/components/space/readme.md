@@ -1,6 +1,6 @@
 # fairys-space
 
-
+设置组件之间的间距。
 
 <!-- Auto Generated Below -->
 
