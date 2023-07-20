@@ -10,4 +10,13 @@ export default defineConfig({
       rootRoutes: "@/routes"
     })
   ],
+  module: {
+    rules: [
+      {
+        test: /\.md$/,
+        use: ['@saqu/loader-md-react-preview'],
+        type: 'typescript',
+      },
+    ],
+  },
 });
