@@ -18,7 +18,7 @@
 - [x] Button 按钮
 - [x] Space 间距
 - [ ] Grid 栅格
-- [ ] Divider 分割线
+- [x] Divider 分割线
 - [ ] Layout 布局
 
 ## 表单组件
