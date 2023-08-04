@@ -15,12 +15,12 @@
     "simple-markdown-preview": "~0.0.1"
   },
   "devDependencies": {
-    "@saqu/auto-create-enter": "^0.1.6",
+    "@saqu/auto-create-enter": "^0.1.20",
     "@types/styled-components": "^5.1.26",
-    "@saqu/auto-create-routes": "^0.1.6",
+    "@saqu/auto-create-routes": "^0.1.20",
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
-    "saqu": "^0.1.6"
+    "saqu": "^0.1.20"
   },
   "scripts": {
     "start": "saqu start",

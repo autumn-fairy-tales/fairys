@@ -1,5 +1,18 @@
 # fairys
 
+# 开发
+
+```bash
+# 安装
+yarn install
+
+# 监听组件变化 
+cd packages/fairys-core & yarn watch
+
+# 启动预览网站
+cd website & yarn start
+```
+
 # 样式约定
 表单组件默认高度大、默认、小依次为 `36px`、`32px`、`28px`
 圆角 `2px`
@@ -17,7 +30,7 @@
 - [ ] Icon 组件
 - [x] Button 按钮
 - [x] Space 间距
-- [ ] Grid 栅格
+- [x] Grid 栅格
 - [x] Divider 分割线
 - [ ] Layout 布局
 

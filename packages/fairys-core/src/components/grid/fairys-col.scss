@@ -1,0 +1,17 @@
+$class-prefix: 'fairys-col';
+$border-color: #d9d9d9;
+
+@mixin clos($count: 24) {
+  @for $i from 1 through $count {
+    .#{$class-prefix}-#{$i} {
+      flex: 0 0 100% / (24 / $i);
+      box-sizing: border-box;
+    }
+  }
+}
+
+.#{$class-prefix}-0 {
+  display: none;
+}
+
+@include clos();
