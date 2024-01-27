@@ -4,7 +4,7 @@ $border-color: #d9d9d9;
 @mixin clos($count: 24) {
   @for $i from 1 through $count {
     .#{$class-prefix}-#{$i} {
-      flex: 0 0 100% / (24 / $i);
+      flex: 0 0 100% / calc(24 / $i);
       box-sizing: border-box;
     }
   }

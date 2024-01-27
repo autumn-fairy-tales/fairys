@@ -6,8 +6,15 @@
 # 安装
 yarn install
 
+# 编译包输出配置文件
+cd packages/react-output-target & yarn build
+
 # 监听组件变化 
 cd packages/fairys-core & yarn watch
+
+# 生成React组件
+cd packages/fairys-react & yarn watch
+
 
 # 启动预览网站
 cd website & yarn start

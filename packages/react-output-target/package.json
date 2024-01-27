@@ -15,7 +15,7 @@
     "access": "public"
   },
   "scripts": {
-    "watch": "tsc --watch",
+    "start": "tsc --watch",
     "build": "tsc"
   },
   "dependencies": {
