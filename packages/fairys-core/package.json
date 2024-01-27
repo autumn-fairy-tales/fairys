@@ -28,13 +28,13 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^4.0.0"
+    "@stencil/core": "^4.11.0"
   },
   "devDependencies": {
-    "@stencil/sass": "~3.0.4",
+    "@stencil/sass": "~3.0.8",
     "@fairys/react-output-target": "0.0.1",
     "classnames": "^2.3.2",
-    "postcss": "8.4.24",
+    "postcss": "8.4.33",
     "postcss-js": "4.0.1",
     "fs-extra": "~11.1.1",
     "@stencil/react-output-target": "~0.5.3",
