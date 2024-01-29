@@ -1,0 +1,37 @@
+
+
+:host(.fairys-label){
+  position: relative;
+  display: flex;
+  align-items:center;
+  flex-direction: row;
+
+  .fairys-input-text {
+    margin-inline-end: 8px;
+    margin-inline-start: 0;
+    position: relative;
+  }
+  //添加冒号
+  &.fairys-label-colon {
+    &::after{
+      content: ':';
+      position: absolute;
+      top:0px;
+      bottom:0px;
+      right: 8px;
+      display: flex;
+      align-items:center;
+      flex-direction: row;
+    }
+    ::slotted([slot="label"]) {
+      margin-inline-end: 16px;
+    }
+    .fairys-label-text{
+      margin-inline-end: 16px;
+    }
+  }
+  ::slotted([slot="label"]) {
+    margin-inline-end: 8px;
+    margin-inline-start: 0;
+  }
+}

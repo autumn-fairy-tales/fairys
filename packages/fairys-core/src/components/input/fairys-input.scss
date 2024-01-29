@@ -1,0 +1,89 @@
+
+:host{
+  /**边框颜色*/
+  --input-border-color:var(--border-color,#ccc) ;
+  /**移入边框颜色*/
+  --input-border-color-hover:var(--border-color-hover,rgb(179, 0, 255));
+  /**移入阴影*/
+  --input-box-shadow-hover:var(--box-shadow-hover,0 0 0 2px rgba(5, 145, 255, 0.1));
+}
+
+:host(.fairys-input){
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 14px;
+  position: relative;
+
+  .fairys-input-main,
+  .fairys-native-input-warp{
+    display: flex;
+    // align-items: center;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .fairys-native-input-warp {
+
+    .fairys-native-input {
+      flex: 1;
+      height: 30px;
+      outline: none;
+      padding: 3px 5px;
+      box-sizing: border-box;
+      border:0px;
+      border:1px solid var(--input-border-color);
+      box-sizing: border-box;
+      border-radius: 3px;
+      &:focus,&:hover{
+        border-color: var(--input-border-color-hover);
+        transition: border-color 300ms;
+        box-shadow: var(--input-box-shadow-hover)
+      }
+    }
+
+    ::slotted([slot="start"]),::slotted([slot="end"]) {
+      display: flex;
+      flex-direction: row;
+      align-items:center;
+      padding: 0px 5px;
+      box-sizing:border-box;
+    }
+    
+    ::slotted([slot="start"]) {
+      margin-inline-end: 0px;
+      margin-inline-start: 0;
+      border: 1px solid var(--input-border-color);
+      border-right:0px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    ::slotted([slot="end"]) {
+      margin-inline-start: 0px;
+      margin-inline-end: 0;
+      border: 1px solid var(--input-border-color);
+      border-left:0px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+
+  &.fairys-input-start .fairys-native-input-warp  {
+    .fairys-native-input{
+      border-top-left-radius:0px;
+      border-bottom-left-radius:0px;
+    }
+  }
+  &.fairys-input-end .fairys-native-input-warp {
+    .fairys-native-input{
+      border-top-right-radius:0px;
+      border-bottom-right-radius:0px;
+    }
+  }
+
+  &.fairys-input-top{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
