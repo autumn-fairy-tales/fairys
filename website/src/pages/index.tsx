@@ -1,10 +1,22 @@
 // import { Button } from "@fairys/react/lib/components/button"
-import { Button, Icon, Input, } from '@fairys/react'
+import { useState } from "react"
+import { Button, Icon, Input, Tab, TabItem } from '@fairys/react'
+
+
 
 const Index = () => {
+  const [activeKey, setActiveKey] = useState("1")
+
 
   return <div>
-    <form action='/bout'>
+    <Tab onActive={(event) => {
+      console.log("event", event.detail.activeKey)
+      setActiveKey(event.detail.activeKey)
+    }} >
+      <TabItem title='标题' fkey='1' disabled={activeKey === '2'} >这是啥</TabItem>
+      <TabItem title='标题2' fkey='2' >这是啥2</TabItem>
+    </Tab>
+    {/* <form action='/bout'>
       <Input label='label1' name="a">
         <div slot="start">start</div>
         <div slot="end">end</div>
@@ -21,7 +33,7 @@ const Index = () => {
       <Input label='top' layoutType='top' name="d" />
       <br />
       <Input label='floating' layoutType='floating' name="e" />
-    </form>
+    </form> */}
     {/* <form onSubmit={(event) => {
       event.preventDefault()
       event.stopPropagation()

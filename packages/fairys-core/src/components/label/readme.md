@@ -1,4 +1,4 @@
-# fairys-icon
+# fairys-label
 
 
 

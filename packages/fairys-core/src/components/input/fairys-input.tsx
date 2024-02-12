@@ -1,4 +1,4 @@
-import { Component, Host, h, ComponentInterface, Element, AttachInternals, Prop, State, } from '@stencil/core';
+import { Component, Host, h, ComponentInterface, Element, AttachInternals, Prop, State, EventEmitter, Event, } from '@stencil/core';
 import { TextFieldTypes } from "../../interface"
 import classname from 'classnames';
 
@@ -21,13 +21,14 @@ export class FairysInput implements ComponentInterface {
   @Prop() placeholder: string = '请输入'
   @Prop() name?: string
   @Element() el: HTMLElement;
+  @Event({ bubbles: false }) input: EventEmitter<string>;
+  @Event({ bubbles: false }) blur: EventEmitter<Event>;
+  @Event({ bubbles: false }) focus: EventEmitter<Event>;
 
   @AttachInternals() internals: ElementInternals;
 
-
   private hasValue(): boolean {
     return !!this.value
-    // return this.getValue().length > 0;
   }
 
   private get startSlot() {
@@ -41,6 +42,7 @@ export class FairysInput implements ComponentInterface {
   private onInputValue(event) {
     this.value = event.target.value;
     this.internals.setFormValue(event.target.value);
+    this.input.emit(this.value)
   }
 
   private get newColon() {
@@ -50,12 +52,15 @@ export class FairysInput implements ComponentInterface {
     return this.colon;
   }
 
-  private onCurrentFocus() {
+  private onCurrentFocus(event: Event) {
     this.hasFocus = true;
+    this.focus.emit(event)
   }
 
-  private onCurrentBlur() {
+
+  private onCurrentBlur(event: Event) {
     this.hasFocus = false;
+    this.blur.emit(event)
   }
 
   render() {
@@ -83,7 +88,7 @@ export class FairysInput implements ComponentInterface {
               placeholder={this.placeholder}
               onFocus={this.onCurrentFocus}
               onBlur={this.onCurrentBlur}
-              onInput={(event) => this.onInputValue(event)}
+              onInput={this.onInputValue}
             />
             <slot name='end' />
           </div>
